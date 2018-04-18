@@ -1,5 +1,5 @@
 /** client entity representation, position, sprite; that's pretty much it */
-class ClientEntity
+module.exports = class ClientEntity
 {
   constructor(client)
   {

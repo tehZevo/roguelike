@@ -23,7 +23,7 @@ module.exports = class NetworkComponent extends Component
     var world = e.getComponent(BaseComponent).getWorld();
 
     //console.log("Sending entity_update");
-    net.emit("entity_update", this.buildUpdatePacket()); //send entity update packet to all clients
+    world.server.sockets.emit("entity_update", this.buildUpdatePacket()); //send entity update packet to all clients
   }
 
   onCreate()

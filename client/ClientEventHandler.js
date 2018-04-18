@@ -39,8 +39,9 @@ module.exports = class ClientEventHandler
   onMap(data)
   {
     this.client.map.removeAll(true); //remove all current map sprites
-
     var keys = Object.keys(data);
+
+    console.log("received map with " + keys.length + " keys")
 
     for(var i = 0; i < keys.length; i++)
     {
@@ -62,8 +63,16 @@ module.exports = class ClientEventHandler
 
       var tileStr = tile == 0 ? "tile" : tile == 1 ? "block" : "";
 
+      if(xy[0] == null || xy[1] == null)
+      {
+        continue;
+      }
       //add tile to map
       var s = this.client.map.create(xy[0] * this.client.ppu, xy[1] * this.client.ppu, tileStr);
+      s.x = Math.random() * 100 - 50;
+      s.y = Math.random() * 100 - 50;
+      //console.log(s)
+      console.log("adding:", xy[0] * this.client.ppu, xy[1] * this.client.ppu, tileStr)
       //s.autoCull = true;
     }
 
@@ -86,6 +95,7 @@ module.exports = class ClientEventHandler
     }
 
     var e = new ClientEntity(this.client);
+    
     e.setImage(data.image)
 
     es[data.id] = e;
