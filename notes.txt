@@ -1,0 +1,67 @@
+new roguelike notes:
+build ecs from the ground up to be networkable
+multiplayer game for 1-8ish players
+TODO: add map name and floor back to gameworld or something
+TODO: client index.html.. electron-ify
+
+//TODO: hud: http://www.html5gamedevs.com/topic/1924-hud-how-to-implement-it/
+//TODO: HitboxComponent (takes damage? manages sprite hitbox?);
+//TODO: change onHit to onDamage(d)? idk
+
+tile based but smooth
+standard hp/mp
+party system
+dungeons
+towns
+
+no classes?
+skillbooks
+levelable weapons?
+
+heal balance = another stat?
+
+https://i.warosu.org/data/tg/img/0433/50/1446137460297.png
+
+clientside-entity (visual + position + whatever)
+
+tree dungeon
+as you go up/down the tree, dungeon changes size
+patch of leaves opens up for stairs
+
+servers auto generate:
+  client connects to main(login) server
+  client logs in
+  main server connects client to "town" game server
+  client requests dungeon "forest" (floor 1)
+  town game server asks main server for location (host/port) of server running "forest floor 1"
+  main server does not have location of any "forest floor 1" rooms, so it asks a game server to create that room
+
+
+make client+server work
+implement webpack on client
+combine client + server code with webpack build for client
+
+class cardss:
+  increase stats based on level
+"thief card"
+"assassin card" requires "thief card" level 10 or something
+skillbooks require class cards
+
+thief assassin ninja
+thief requires nothing?
+assassin requires thief level 10
+
+1-10
+11-30
+31-60
+60-100
+
+client max aspect ratio
+
+
+dungeon types:
+  rooms + hallways (dead-ends/no deadends)
+  cellular
+  mazes (perfect/labrynth)
+
+"villages" on some floors divisible by 10

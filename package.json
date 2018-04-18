@@ -1,0 +1,14 @@
+{
+  "name": "roguelike-game",
+  "description": "a roguelike game",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "async": "^2.5.0",
+    "express": "^4.15.3",
+    "phaser-ce": "^2.10.3",
+    "rot-js": "^0.6.2",
+    "socket.io": "^2.0.3",
+    "yargs": "^8.0.2"
+  }
+}

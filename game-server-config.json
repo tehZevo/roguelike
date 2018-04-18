@@ -1,0 +1,10 @@
+{
+  "host": "localhost",
+  "port": 4200,
+
+  "loginServer":
+  {
+    "host": "localhost",
+    "port": 2400
+  }
+}

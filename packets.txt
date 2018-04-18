@@ -1,0 +1,11 @@
+server -> client
+entity_create: when an entity is created
+  {id:int}
+entity_update
+entity_delete
+map: world map
+identity: tell the player which entity they control
+instance: move to a different instance (host, port, namespace)
+
+client -> server
+player_move: player keyboard input results in movement (TODO: rename to player_action?)
